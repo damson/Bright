@@ -1,2 +1,2 @@
-bright
+Bright
 ======
