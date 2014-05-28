@@ -16,13 +16,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static com.devddagnet.bright.lib.Bright.Config;
+
 public class PictureFragment extends Fragment implements Transformation, Callback {
 
     private static final String TAG = "BRIGHT";
 
     TextView[] labels     = new TextView[5];
-    int[]      luminances = new int[5];
+    int[] luminances = new int[5];
     ImageView mPicture;
+    Bright.Luminance bright = Bright.setup(Config.PERCEIVED | Config.PERFORMANCE);
 
     public PictureFragment() {
     }
@@ -62,11 +65,11 @@ public class PictureFragment extends Fragment implements Transformation, Callbac
         for (int i = 0; i < labels.length; ++i) {
             int luminance = luminances[i];
             TextView label = labels[i];
-            final int textColor = Bright.isBright(luminance) ? Color.BLACK
+            final int textColor = bright.isBright(luminance) ? Color.BLACK
                     : Color.WHITE;
 
             label.setTextColor(textColor);
-            label.setText("Bright (" + luminance + ")");
+            label.setText("Bright (" + (int) luminance + ")");
         }
     }
 
@@ -86,8 +89,7 @@ public class PictureFragment extends Fragment implements Transformation, Callbac
             int height = label.getHeight();
 
             Bitmap dest = Bitmap.createBitmap(source, x, y, width, height);
-            int[] rgb = Bright.averageRGB(dest);
-            luminances[i] = Bright.getBrightness(rgb);
+            luminances[i] = bright.brightness(dest);
             dest.recycle();
         }
         return source;

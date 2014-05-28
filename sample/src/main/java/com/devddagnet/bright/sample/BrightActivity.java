@@ -11,7 +11,7 @@ public class BrightActivity extends FragmentActivity implements ActionBar.TabLis
 
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager            mViewPager;
-    ActionBar mActionbar;
+    ActionBar            mActionbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

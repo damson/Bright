@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import static com.devddagnet.bright.lib.Bright.Config;
+
 public class MultiColorFragment extends Fragment {
 
     public MultiColorFragment() {
@@ -31,10 +33,11 @@ public class MultiColorFragment extends Fragment {
             TextView textView = (TextView) rootView.getChildAt(i);
 
             final int color = ((ColorDrawable) textView.getBackground()).getColor();
-            final int luminance = Bright.getBrightness(color);
+            int luminance = Bright.setup(Config.RELATIVE).brightness(color);
+            boolean isBright = Bright.getInstance().isBright(luminance);
 
             textView.setText("Bright (" + luminance + ")");
-            textView.setTextColor(Bright.isBright(luminance) ? Color.BLACK : Color.WHITE);
+            textView.setTextColor(isBright ? Color.BLACK : Color.WHITE);
         }
         return rootView;
     }
