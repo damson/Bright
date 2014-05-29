@@ -89,11 +89,11 @@ public class Bright {
          */
         public static final int PERFORMANCE = 1;
         /**
-         * luminance relative: Luma CCIR 601
+         * luminance relative: Luma BT. 709
          */
         public static final int RELATIVE    = 2;
         /**
-         * luminance perceived: Luma BT. 709
+         * luminance perceived: Luma CCIR 601
          */
         public static final int PERCEIVED   = 4;
     }
