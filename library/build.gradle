@@ -2,14 +2,13 @@ apply plugin: 'android-library'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "19.0.3"
+    buildToolsVersion "19.1.0"
 
     defaultConfig {
+        packageName "com.devddagnet.bright.lib"
+        versionCode 4
+        versionName "1.0"
         minSdkVersion 8
         targetSdkVersion 19
     }
-}
-
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
