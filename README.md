@@ -13,8 +13,8 @@ or the luminance of an area (`bitmap`) from its average color.
 
 The library is configurable through two variants:
 
-* `RELATIVE`: relative luminance following the luma recommendation [BT. 709](http://en.wikipedia.org/wiki/Rec._709)
-* `PERCEIVED`: perceived luminance following the luma recommendation [CCIR 601](http://en.wikipedia.org/wiki/CCIR_601)
+* `RELATIVE`: relative luminance following the Luma recommendation [BT. 709](http://en.wikipedia.org/wiki/Rec._709)
+* `PERCEIVED`: perceived luminance following the Luma recommendation [CCIR 601](http://en.wikipedia.org/wiki/CCIR_601)
 
 and a performance boost option:
 
@@ -95,4 +95,4 @@ per unit area of light travelling in a given direction.
 
 
 [Sample Sources]: https://github.com/damson/Bright/tree/master/sample/src/main/java/com/devddagnet/bright/sample
-[Sample Apk]: https://github.com/damson/Bright/raw/master/sample/sample.apk
+[Sample Apk]: https://github.com/damson/Bright/raw/master/releases/bright-sample.apk
