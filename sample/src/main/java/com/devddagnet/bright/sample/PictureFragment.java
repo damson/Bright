@@ -53,7 +53,9 @@ public class PictureFragment extends Fragment implements Transformation, Callbac
 
         final String url = getArguments().getString("url");
 
-        Picasso.with(getActivity()).load(url).fit().centerCrop().transform(this)
+        Picasso.with(getActivity()).load(url).config(Bitmap.Config.RGB_565)
+                .fit().centerCrop()
+                .transform(this)
                 .into(mPicture, this);
         return rootView;
     }
