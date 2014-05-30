@@ -20,6 +20,23 @@ and a performance boost option:
 
 * `PERFORMANCE`: trade accuracy for performance
 
+## Integration
+
+* Download the [latest version][Library aar]
+* Move it in the library folder of your project: `libs/bright-1.0.aar`
+* Add the following dependency to your `build.gradle`
+
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    
+    dependencies {
+        compile 'com.devddagnet.bright.lib:bright:1.0@aar'
+    }
+
 ## Usage
 
 #### Basic
@@ -96,3 +113,4 @@ per unit area of light travelling in a given direction.
 
 [Sample Sources]: https://github.com/damson/Bright/tree/master/sample/src/main/java/com/devddagnet/bright/sample
 [Sample Apk]: https://github.com/damson/Bright/raw/master/releases/bright-sample.apk
+[Library aar]: https://github.com/damson/Bright/releases/download/v1.0.0-release/bright-1.0.aar
