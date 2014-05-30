@@ -26,7 +26,7 @@ and a performance boost option:
 * Move it in the library folder of your project: `libs/bright-1.0.aar`
 * Add the following dependency to your `build.gradle`
 
-
+```
     repositories {
         flatDir {
             dirs 'libs'
@@ -36,6 +36,7 @@ and a performance boost option:
     dependencies {
         compile 'com.devddagnet.bright.lib:bright:1.0@aar'
     }
+```
 
 ## Usage
 
