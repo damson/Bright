@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_green_light"
+        android:background="@color/holo_green_light"
         android:gravity="center"
         android:text="bright" />
 
@@ -35,7 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_orange_light"
+        android:background="@color/holo_orange_light"
         android:gravity="center"
         android:text="bright" />
 
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_red_light"
+        android:background="@color/holo_red_light"
         android:gravity="center"
         android:text="bright" />
 
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_blue_bright"
+        android:background="@color/holo_blue_bright"
         android:gravity="center"
         android:text="bright" />
 
@@ -59,7 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_blue_light"
+        android:background="@color/holo_blue_light"
         android:gravity="center"
         android:text="bright" />
 
@@ -75,7 +75,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_green_dark"
+        android:background="@color/holo_green_dark"
         android:gravity="center"
         android:text="bright" />
 
@@ -83,7 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_orange_dark"
+        android:background="@color/holo_orange_dark"
         android:gravity="center"
         android:text="bright" />
 
@@ -115,7 +115,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_red_dark"
+        android:background="@color/holo_red_dark"
         android:gravity="center"
         android:text="bright" />
 
@@ -131,7 +131,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_purple"
+        android:background="@color/holo_purple"
         android:gravity="center"
         android:text="bright" />
 
@@ -139,7 +139,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@color/holo_blue_dark"
         android:gravity="center"
         android:text="bright" />
 
