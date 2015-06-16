@@ -16,6 +16,10 @@ public class Utility {
         for (int x = 0; x < width; ++x) {
             for (int y = 0; y < height; ++y) {
                 pixelColor = bitmap.getPixel(x, y);
+                if (pixelColor == 0) {
+                    size--;
+                    continue;
+                }
                 R += Color.red(pixelColor);
                 G += Color.green(pixelColor);
                 B += Color.blue(pixelColor);
