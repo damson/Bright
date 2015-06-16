@@ -1,63 +1,44 @@
 package com.devddagnet.bright.sample;
 
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
+import com.devddagnet.bright.sample.widget.SlidingTabLayout;
+
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
-public class BrightActivity extends FragmentActivity implements ActionBar.TabListener,
-        ViewPager.OnPageChangeListener {
+public class BrightActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
-    SectionsPagerAdapter mSectionsPagerAdapter;
-    ViewPager            mViewPager;
-    ActionBar            mActionbar;
+    private ActionBar        mActionbar;
+    private SlidingTabLayout mSlidingTabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bright);
 
-        mActionbar = this.getActionBar();
-        mActionbar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        mActionbar = this.getSupportActionBar();
+        mActionbar.setElevation(0);
 
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), this);
-        mViewPager = (ViewPager) findViewById(R.id.pager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        viewPager.setAdapter(new SectionsPagerAdapter(getSupportFragmentManager(), this));
+        viewPager.addOnPageChangeListener(this);
 
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-        mViewPager.setOnPageChangeListener(this);
-        for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
-            mActionbar.addTab(
-                    mActionbar.newTab()
-                            .setText(mSectionsPagerAdapter.getPageTitle(i))
-                            .setTabListener(this)
-            );
-        }
-    }
-
-    @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-        mViewPager.setCurrentItem(tab.getPosition());
+        mSlidingTabLayout = (SlidingTabLayout) this.findViewById(R.id.sliding_tabs);
+        mSlidingTabLayout.setViewPager(viewPager);
     }
 
     @Override
     public void onPageSelected(int position) {
         if (position == 0) {
             mActionbar.show();
+            mSlidingTabLayout.setVisibility(View.VISIBLE);
         } else {
             mActionbar.hide();
+            mSlidingTabLayout.setVisibility(View.GONE);
         }
-        mActionbar.setSelectedNavigationItem(position);
     }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-    }
-
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
