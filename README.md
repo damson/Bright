@@ -1,3 +1,9 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Bright-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/92)
+
+
+***
+
+
 # Bright
 
 <img src='./bright_screen_sample_multicolor.png' width='270' height='480' />
@@ -113,9 +119,5 @@ per unit area of light travelling in a given direction.
 
 
 [Sample Sources]: https://github.com/damson/Bright/tree/master/sample/src/main/java/com/devddagnet/bright/sample
-[Sample Apk]: https://github.com/damson/Bright/raw/master/releases/bright-sample.apk
-[Library aar]: https://github.com/damson/Bright/releases/download/v1.0.0-release/bright-1.0.aar
-
-***
-
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Bright-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/92)
+[Sample Apk]: https://github.com/damson/Bright/releases/latest
+[Library aar]: https://github.com/damson/Bright/releases/latest
