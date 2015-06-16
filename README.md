@@ -1,5 +1,5 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Bright-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/92)
-
+[![JitPack IO](https://img.shields.io/github/release/damson/Bright.svg?label=JitPack)](https://jitpack.io/#damson/Bright/v1.1.0-release)
 
 ***
 
@@ -27,6 +27,13 @@ and a performance boost option:
 * `PERFORMANCE`: trade accuracy for performance
 
 ## Integration
+
+### Auto
+
+Two-steps integration [using JitPack][jitpack-io url]
+
+
+### Manual
 
 * Download the [latest version][Library aar]
 * Move it in the library folder of your project: `libs/bright-1.0.aar`
@@ -121,3 +128,4 @@ per unit area of light travelling in a given direction.
 [Sample Sources]: https://github.com/damson/Bright/tree/master/sample/src/main/java/com/devddagnet/bright/sample
 [Sample Apk]: https://github.com/damson/Bright/releases/latest
 [Library aar]: https://github.com/damson/Bright/releases/latest
+[jitpack-io url]: https://jitpack.io/#damson/Bright/v1.1.0-release
