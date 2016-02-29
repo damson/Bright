@@ -39,7 +39,7 @@ Two-steps integration [using JitPack][jitpack-io url]
 * Move it in the library folder of your project: `libs/bright-1.0.aar`
 * Add the following dependency to your `build.gradle`
 
-```
+```groovy
     repositories {
         flatDir {
             dirs 'libs'
@@ -56,17 +56,17 @@ Two-steps integration [using JitPack][jitpack-io url]
 #### Basic
 
 Get the luminance of a color or an area
-
+```java
     int luminance = Bright.getInstance().brightness(color/rgb/bitmap);
-
+```
 Check if it is brighter than dark
-
+```java
     Bright.getInstance().isBright(luminance);
-
+```
 Or directly check from a color or an area
-
+```java
     Bright.getInstance().isBright(rgb/bitmap)
-
+```
 #### Options
 
 Luminance variants: `RELATIVE`, `PERCEIVED`
@@ -74,19 +74,19 @@ Luminance variants: `RELATIVE`, `PERCEIVED`
 Performance boost: `PERFORMANCE`
 
 Get brightness from the relative luminance
-
+```java
     int luminance = Bright.setup(Config.RELATIVE).brightness(color/rgb/bitmap)
-
+```
 Get brightness from the perceived luminance
-
+```java
     int luminance = Bright.setup(Config.PERCEIVED).brightness(color/rgb/bitmap)
-
+```
 Trade accuracy for performance
-
+```java
     Bright.setup(Config.RELATIVE | Config.PERFORMANCE)
 
     Bright.setup(Config.PERCEIVED | Config.PERFORMANCE)
-
+```
 ## Sample
 
 __[APK][Sample Apk] | [Sources][Sample Sources]__
@@ -110,7 +110,7 @@ per unit area of light travelling in a given direction.
 
 ## License
 
-    Copyright 2014 Damien Dagnet
+    Copyright 2016 Damien Dagnet
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
