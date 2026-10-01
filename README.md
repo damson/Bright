@@ -6,6 +6,39 @@
 
 # Bright
 
+> ## Deprecated
+>
+> Use the AndroidX Palette API and its luminance helpers instead. `androidx.palette`
+> extracts the dominant colors of a bitmap and hands back text colors that are already
+> contrast-checked against them, and `androidx.core.graphics.ColorUtils` computes relative
+> luminance and contrast for a single color. Both ship with the platform support libraries,
+> are maintained, and cover everything this library did.
+>
+> ```groovy
+>     implementation 'androidx.palette:palette:1.0.0'
+>     implementation 'androidx.core:core-ktx:1.13.1'
+> ```
+>
+> | Bright | Replacement |
+> | --- | --- |
+> | `brightness(color)` | `ColorUtils.calculateLuminance(color)` (or `Color.luminance()`, API 26+) |
+> | `isBright(color)` | `ColorUtils.calculateLuminance(color) > 0.5` |
+> | `brightness(bitmap)` / `isBright(bitmap)` | `Palette.from(bitmap).generate()`, then `calculateLuminance` on the swatch's `rgb` |
+> | black-or-white text over an area | `swatch.titleTextColor` / `swatch.bodyTextColor`, or `ColorUtils.calculateContrast` |
+> | grayscale conversion | `ColorMatrixColorFilter` with saturation `0`, or `RenderEffect` on API 31+ |
+>
+> ```kotlin
+>     // single color
+>     val isBright = ColorUtils.calculateLuminance(color) > 0.5
+>
+>     // an area of a bitmap
+>     val swatch = Palette.from(bitmap).setRegion(left, top, right, bottom).generate().dominantSwatch
+>     val textColor = swatch?.bodyTextColor ?: Color.BLACK
+> ```
+>
+> No further releases are planned. The sections below describe the last published version
+> and are kept for projects still on it.
+
 <img src='./bright_screen_sample_multicolor.png' width='270' height='480' />
 <img src='./bright_screen_sample_picture.png' width='270' height='480' />
 
